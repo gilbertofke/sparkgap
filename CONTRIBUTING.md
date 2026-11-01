@@ -30,6 +30,11 @@ Run the same checks that CI runs before you push:
     uv run mypy src
     uv run pytest
 
+Install the git hooks so lint, type checks and the commit message check run
+before each commit:
+
+    uv run pre-commit install --hook-type pre-commit --hook-type commit-msg
+
 ## Workflow
 
 1. Branch from an up-to-date `main`. Name the branch `type/short-description`,
